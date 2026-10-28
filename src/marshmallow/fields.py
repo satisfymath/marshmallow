@@ -10,14 +10,15 @@ import email.utils
 import ipaddress
 import math
 import numbers
+import sys
 import typing
 import uuid
 from collections.abc import Mapping as _Mapping
 from enum import Enum as EnumType
 
-try:
+if sys.version_info >= (3, 11):
     from typing import Unpack
-except ImportError:  # Remove when dropping Python 3.10
+else:  # Remove when dropping Python 3.10
     from typing_extensions import Unpack
 
 # Remove when dropping Python 3.10
